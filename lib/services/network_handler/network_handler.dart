@@ -4,14 +4,14 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 class NetworkHandler {
   static final client = http.Client();
   static final storage = FlutterSecureStorage();
-  static void post(var body, String endpoint) async {
+  static Future<String> post(var body, String endpoint) async {
     var response = await client.post(buildUrl(endpoint),
         body: body, headers: {"Content-type": "application/json"});
-    print(response.body);
+    return response.body;
   }
 
   static Uri buildUrl(String endpoint) {
-    String host = "http://10.169.130.82/";
+    String host = "http://192.168.0.24/";
     final apiPath = host + endpoint;
     return Uri.parse(apiPath);
   }
