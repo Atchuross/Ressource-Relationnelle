@@ -26,7 +26,7 @@ class LoginBottomSheet extends StatelessWidget {
                 onPressed: () {
                   Get.back();
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.clear,
                   size: 30,
                 ),
@@ -65,7 +65,7 @@ class LoginBottomSheet extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           ),
           Container(
@@ -110,6 +110,7 @@ class LoginBottomSheet extends StatelessWidget {
               ),
               controller: loginController.loginPasswordEditingController,
               obscureText: true,
+              obscuringCharacter: "●",
             ),
           ),
           const SizedBox(
