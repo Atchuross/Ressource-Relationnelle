@@ -16,6 +16,10 @@ class NetworkHandler {
     return Uri.parse(apiPath);
   }
 
+  static void storeIdUser(String id) async {
+    await storage.write(key: "id", value: id);
+  }
+
   static void storeToken(String token) async {
     await storage.write(key: "token", value: token);
   }

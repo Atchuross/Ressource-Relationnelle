@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../theme/colors.dart';
 
-class SPTextFormField extends StatelessWidget {
-  const SPTextFormField(
+class SPTextPassFormField extends StatelessWidget {
+  const SPTextPassFormField(
       {Key? key,
       required this.labelText,
       this.validator,
@@ -43,6 +43,8 @@ class SPTextFormField extends StatelessWidget {
           ),
         ),
         validator: validator,
+        obscureText: true,
+        obscuringCharacter: "●",
         //controller: loginController.loginUsernameEditingController,
       ),
     );

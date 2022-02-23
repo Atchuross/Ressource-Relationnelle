@@ -21,6 +21,7 @@ class LoginController extends GetxController {
     var response = await NetworkHandler.post(
         loginModelToJson(loginModel), "api/LoginViewModels/Login");
     var data = json.decode(response);
+    print(data["id"]);
     if (data["message"] == "register") {
       Get.to(Register());
     }
